@@ -1,0 +1,26 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+debug
+__debug_bin
+
+# Test binary, built with `go test -c`
+*.test
+
+# Go workspace file
+#go.work
+
+# Project specific files
+magnetiq
+magnetiq-linux
+magnetiq-mac
+
+*.p12
+.env
+/.vscode/
+magnetiq.json
+magnetiq-register.reg
+magnetiq-unregister.reg
