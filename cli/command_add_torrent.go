@@ -47,7 +47,12 @@ var (
 			httpClient := &http.Client{}
 
 			if sets.MTLSCertificate != "" {
-				file, err := os.Open(sets.MTLSCertificate)
+				certfn, err := toAbs(sets.MTLSCertificate)
+				if err != nil {
+					return err
+				}
+
+				file, err := os.Open(certfn)
 				if err != nil {
 					return err
 				}
